@@ -1,5 +1,7 @@
 <%@tag description="Overall Page template" pageEncoding="UTF-8"%>
 <%@attribute name="title" fragment="true" %>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
+
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
