@@ -4,7 +4,7 @@
 	
 	<t:genericPage>
 	    	<jsp:attribute name="title">
-		      <title>Accueil</title>
+		      <title>Saisie d'un stage</title>
 		    </jsp:attribute>
 		    <jsp:body>
 				<h1 class="center">Formulaire d'ajout d'un stage</h1>

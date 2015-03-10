@@ -146,7 +146,7 @@ public class Controleur extends HttpServlet
 					unStage.setNbinscrits(Integer.valueOf((request.getParameter("nbplaces"))).intValue());
 					unStage.setNbinscrits(Integer.valueOf((request.getParameter("nbinscrits"))).intValue());
 					unStage.insertionStageModifie(request.getParameter("id"));
-					destinationPage = "/index.jsp";
+					destinationPage = "/Controleur?action=afficheStage";
 				} catch (Exception e)
 				{
 					request.setAttribute("MesErreurs", e.getMessage());

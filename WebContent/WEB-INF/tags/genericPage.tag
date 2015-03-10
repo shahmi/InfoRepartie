@@ -40,8 +40,14 @@
 		            <li class="active"><a href="./">Accueil</a></li>
 		            <li><a href="Controleur?action=saisieStage">Saisir un stage</a></li>
 		            <li><a href="Controleur?action=afficheStage">Afficher la liste des stages</a></li>
-		            <li><a href="">Rechercher un stage</a></li>
 		          </ul>
+		          <form class="form-inline navbar-form navbar-right" action="Controleur" method="get">
+		  			<div class="form-group">
+		  				<input name="action" value="rechercheStage" type="text" hidden="true">
+					    <input name="nomStage" type="text" class="form-control" placeholder="Entrer le nom du stage ..." required>
+					   <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Rechercher</button>
+					</div>
+				  </form>
 		        </div><!--/.nav-collapse -->
 		      </div>
 		    </nav>
