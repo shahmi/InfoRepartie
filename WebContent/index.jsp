@@ -36,6 +36,12 @@
 						   <button type="submit" class="btn btn-default">Rechercher !</button>
 						</div>
 					  </form>
+					   <form class="form-inline" action="Controleur" method="get">
+			  			<div class="form-group">
+			  				<input name="action" value="rechercheAvanceStage" type="text" hidden="true">
+						   <button type="submit" class="btn btn-default">Accèder à la recherche avancée</button>
+						</div>
+					  </form>
 			        </div>
 			      </div>
     		</jsp:body>

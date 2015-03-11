@@ -106,6 +106,8 @@ public class Stage {
 			throw e;
 		}
 	}
+	
+	
 
 	public void insertionStageModifie(String id) throws MonException {
 

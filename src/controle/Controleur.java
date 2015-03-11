@@ -25,7 +25,9 @@ public class Controleur extends HttpServlet
 	private static final String SAISIE_STAGE = "saisieStage";
 	private static final String AFFICHER_STAGE = "afficheStage";
 	private static final String RECHERCHER_STAGE = "rechercheStage";
+	private static final String RECHERCHER_AVANCE_STAGE = "rechercheAvanceStage";
 	private static final String CHERCHER_STAGE = "chercheStage";
+	private static final String RECHERCHE_AVANCEE = "rechercheAvancee";
 	private static final String AJOUT_STAGE = "ajoutStage";
 	private static final String MODIFIER_STAGE = "modifierStage";
 	private static final String ERROR_PAGE = null;
@@ -108,7 +110,6 @@ public class Controleur extends HttpServlet
 				{
 					request.setAttribute("MesErreurs", e.getMessage());
 					destinationPage = "/Erreur.jsp";
-					
 				}
 			} else if (MODIFIER_STAGE.equals(actionName))
 			{
@@ -116,7 +117,10 @@ public class Controleur extends HttpServlet
 				{
 					request.setCharacterEncoding("UTF-8");
 					Stage unStage = new Stage();
-					String nomS = request.getParameter(NAME_STAGE);
+					String id = request.getParameter("id");
+					String nomS = request.getParameter("libelle");
+					String dated = request.getParameter("libelle");
+					String datef = request.getParameter("libelle");
 					System.out.println("Modif : " + nomS);
 					unStage = unStage.modifierStage(nomS);
 					request.setAttribute("libelle", unStage.getLibelle());
@@ -138,7 +142,6 @@ public class Controleur extends HttpServlet
 				{
 					Stage unStage = new Stage();
 					unStage.setId(request.getParameter("id"));
-					System.out.println(request.getParameter("libelle"));
 					unStage.setLibelle(request.getParameter("libelle"));
 					unStage.setDatedebut(conversionChaineenDate(request.getParameter("datedebut"), "yyyy-MM-dd"));
 					unStage.setDatefin(conversionChaineenDate(request.getParameter("datefin"), "yyyy-MM-dd"));
