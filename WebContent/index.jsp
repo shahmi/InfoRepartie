@@ -8,10 +8,9 @@
 		      <title>Accueil</title>
 		    </jsp:attribute>
 		    <jsp:body>
-		        <div class="jumbotron">
+		        <div class="banner">
 			      <div class="container">
-			        <h1>Bonjour !</h1>
-			        <p>Bienvenue sur l'application de gestion de stage HIGH TECH.</p>	
+			        <h2 class="textBanner">Bienvenue sur l'application de gestion de stage HIGH TECH.</h2>
 			      </div>
 			    </div>
 			    <div class="container">
@@ -34,12 +33,6 @@
 			  				<input name="action" value="rechercheStage" type="text" hidden="true">
 						    <input name="nomStage" type="text" class="form-control" placeholder="Entrer le nom du stage ..." required>
 						   <button type="submit" class="btn btn-default">Rechercher !</button>
-						</div>
-					  </form>
-					   <form class="form-inline" action="Controleur" method="get">
-			  			<div class="form-group">
-			  				<input name="action" value="rechercheAvanceStage" type="text" hidden="true">
-						   <button type="submit" class="btn btn-default">Accèder à la recherche avancée</button>
 						</div>
 					  </form>
 			        </div>

@@ -111,16 +111,13 @@ public class Controleur extends HttpServlet
 					request.setAttribute("MesErreurs", e.getMessage());
 					destinationPage = "/Erreur.jsp";
 				}
-			} else if (MODIFIER_STAGE.equals(actionName))
+			}else if (MODIFIER_STAGE.equals(actionName))
 			{
 				try
 				{
 					request.setCharacterEncoding("UTF-8");
 					Stage unStage = new Stage();
-					String id = request.getParameter("id");
-					String nomS = request.getParameter("libelle");
-					String dated = request.getParameter("libelle");
-					String datef = request.getParameter("libelle");
+					String nomS = request.getParameter(NAME_STAGE);
 					System.out.println("Modif : " + nomS);
 					unStage = unStage.modifierStage(nomS);
 					request.setAttribute("libelle", unStage.getLibelle());
